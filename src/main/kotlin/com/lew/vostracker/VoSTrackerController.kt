@@ -66,19 +66,18 @@ class VoSTrackerController {
         vosTwo.image = getImageForVoS(model.currentVoS.second)
     }
 
-    private fun getImageForVoS(vos: VoS): Image {
-        return when (vos) {
-            VoS.AMLODD -> AMLODD_IMAGE
-            VoS.CADARN -> CADARN_IMAGE
-            VoS.CRWYS -> CRWYS_IMAGE
-            VoS.HEFIN -> HEFIN_IMAGE
-            VoS.IORWERTH -> IORWERTH_IMAGE
-            VoS.ITHELL -> ITHELL_IMAGE
-            VoS.MEILYR -> MEILYR_IMAGE
-            VoS.TRAHAEARN -> TRAHAEARN_IMAGE
-            else -> EMPTY_IMAGE
-        }
+    private fun getImageForVoS(vos: VoS) = when (vos) {
+        VoS.AMLODD -> AMLODD_IMAGE
+        VoS.CADARN -> CADARN_IMAGE
+        VoS.CRWYS -> CRWYS_IMAGE
+        VoS.HEFIN -> HEFIN_IMAGE
+        VoS.IORWERTH -> IORWERTH_IMAGE
+        VoS.ITHELL -> ITHELL_IMAGE
+        VoS.MEILYR -> MEILYR_IMAGE
+        VoS.TRAHAEARN -> TRAHAEARN_IMAGE
+        else -> EMPTY_IMAGE
     }
+
 
     fun refresh() {
         header.text = "Refreshing..."

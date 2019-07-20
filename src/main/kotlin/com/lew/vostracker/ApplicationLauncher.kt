@@ -12,7 +12,6 @@ import kotlin.system.exitProcess
 class ApplicationLauncher : Application() {
 
     override fun start(primaryStage: Stage) {
-
         val loader = FXMLLoader(javaClass.classLoader.getResource("VOSTrackerView.fxml"))
         val root = loader.load<Parent>()
         val scene = Scene(root, 250.0, 150.0)
@@ -34,7 +33,6 @@ class ApplicationLauncher : Application() {
 
         val scheduledTasks = ScheduledTasks(loader.getController(), voSService)
         scheduledTasks.schedule()
-
     }
 }
 

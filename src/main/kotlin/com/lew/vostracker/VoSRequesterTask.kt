@@ -29,11 +29,10 @@ class VoSRequesterTask(private val vosTrackerController: VoSTrackerController, p
         }
     }
 
-    private fun parseVoicesResponse(res: JSONObject): List<String> {
-        return res.getJSONObject("query")
+    private fun parseVoicesResponse(res: JSONObject): List<String> =
+        res.getJSONObject("query")
             .getJSONArray("allmessages")
             .getJSONObject(0)
             .getString("content")
             .split(",")
     }
-}
