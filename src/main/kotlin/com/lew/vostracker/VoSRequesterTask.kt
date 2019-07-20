@@ -13,12 +13,14 @@ class VoSRequesterTask(private val vosTrackerController: VoSTrackerController, p
             vosTrackerController.header.text = "Refreshing..."
 
             val res = vosService.requestCurrentVoices()
-            val voices = parseVoicesResponse(res)
+            val vos = parseVoicesResponse(res)
 
-            val voicePair = Pair(VoS.valueOf(voices[0].toUpperCase()), VoS.valueOf(voices[1].toUpperCase()))
+            //val voicePair = Pair(VoS.valueOf(voices[0].toUpperCase()), VoS.valueOf(voices[1].toUpperCase()))
+
+            val vosPair = VoS.valueOf(vos[0].toUpperCase()) to VoS.valueOf(vos[1].toUpperCase())
 
             vosTrackerController.setMessage(ZonedDateTime.now(ZoneOffset.UTC))
-            vosTrackerController.setVoS(voicePair)
+            vosTrackerController.setVoS(vosPair)
             vosTrackerController.refresh.isDisable = false
         } catch (e: Exception) {
             println(e.message)

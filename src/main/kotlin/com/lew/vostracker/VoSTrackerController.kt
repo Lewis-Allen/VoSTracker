@@ -55,11 +55,10 @@ class VoSTrackerController {
             .plusMinutes(-1)
             .format(displayFormatter)
 
-        header.text = "The current VoS of Seren \n($start to $end game time) is:"
+        header.text = "The current Voice of Seren \n($start to $end game time) is:"
     }
 
     fun setVoS(vos: Pair<VoS, VoS>) {
-        (Paths.get("").toAbsolutePath().toString())
         model.currentVoS = vos
 
         vosOne.image = getImageForVoS(model.currentVoS.first)
