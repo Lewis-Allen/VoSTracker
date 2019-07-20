@@ -36,11 +36,8 @@ class ApplicationLauncher : Application() {
         scheduledTasks.schedule()
 
     }
+}
 
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            launch(ApplicationLauncher::class.java)
-        }
-    }
+fun main() {
+    Application.launch(ApplicationLauncher::class.java)
 }
