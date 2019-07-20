@@ -19,9 +19,9 @@ Tracks the Voice of Seren and displays in a window. Created as a mini-project wh
 
 ### Built With
 
-- Kotlin
-- JavaFX
-- khttp
+- [Kotlin](https://kotlinlang.org/)
+- [JavaFX](https://en.wikipedia.org/wiki/JavaFX)
+- [khttp](https://khttp.readthedocs.io/en/latest/)
 
 ## Getting Started
 
@@ -29,11 +29,11 @@ To run the project follow these steps.
 
 ### Prerequisites
 
-- Java 8
+- [Java 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 
 ### Installation
 
-Run using gradle wrapper.
+Run using Gradle wrapper.
 
 - Clone the repository.
 - Build the project. `./gradlew build`
