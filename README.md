@@ -45,4 +45,4 @@ The application automatically updates on start and at every hour. Click refresh 
 
 # Image Copyright
 
-Images taken from runescape.com, and copyright held by Jagex Ltd. Used under fair use.
+Images taken from runescape.com, and copyright held by Jagex Ltd.
